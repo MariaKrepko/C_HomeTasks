@@ -35,4 +35,5 @@ int main()
     for (int j = index_min + 1; j < index_max; j++)
         sum += array[j];
     printf("\n %d ", sum);
+    return 0;
 }
