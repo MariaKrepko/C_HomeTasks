@@ -37,4 +37,5 @@ int main()
         else
             printf("не чередуются ");
     }
+    return 0;
 }
