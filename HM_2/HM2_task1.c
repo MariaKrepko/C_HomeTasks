@@ -6,11 +6,11 @@
 typedef struct linked_list
 {
     char *name;
-    char *open;
-    char *close;
+    char *openn;
+    char *closee;
     struct linked_list *next;
-} 
-inked_list;
+}
+linked_list;
 
 
 void display(linked_list *start)
@@ -18,7 +18,7 @@ void display(linked_list *start)
     linked_list *i = start;
     for (; i != NULL; i = i -> next)
     {
-        printf("Name %s, open %s, close %s\n", i -> name, i -> open, i -> close);
+        printf("Name %s, open %s, close %s\n", i -> name, i -> openn, i -> closee);
     }
 }
 
@@ -31,8 +31,8 @@ void release(linked_list *start)
     {
         next = i->next;
         free(i->name);
-        free(i->open);
-        free(i->close);
+        free(i->openn);
+        free(i->closee);
         free(i->next);
         free(i);
     }
@@ -63,8 +63,8 @@ int main()
     int a, N = 1, mode = 0, n;
     char count;
     char name[40][50];
-    char open[40][50];
-    char close[40][50];
+    char openn[40][50];
+    char closee[40][50];
     linked_list *arr = (linked_list *)malloc(sizeof(linked_list));
     do
     {
@@ -81,13 +81,13 @@ int main()
                 mode = 1;
                 printf("\n%s", "Name:");
                 scanf("%s", &name[0]);
-                printf("\n%s", "open:");
-                scanf("%s", &open[0]);
-                printf("\n%s", "close:");
-                scanf("%s", &close[0]);
+                printf("\n%s", "openn:");
+                scanf("%s", &openn[0]);
+                printf("\n%s", "closee:");
+                scanf("%s", &closee[0]);
                 arr[0].name = name[0];
-                arr[0].open = open[0];
-                arr[0].close = close[0];
+                arr[0].openn = openn[0];
+                arr[0].closee = closee[0];
                 arr[0].next = NULL;
             }
             else
@@ -100,14 +100,14 @@ int main()
             {
                 printf("\n%s", "Name:");
                 scanf("%s", &name[N]);
-                printf("\n%s", "open:");
-                scanf("%s", &open[N]);
-                printf("\n%s", "close:");
-                scanf("%s", &close[N]);
+                printf("\n%s", "openn:");
+                scanf("%s", &openn[N]);
+                printf("\n%s", "closee:");
+                scanf("%s", &closee[N]);
                 arr = (linked_list *)realloc(arr, sizeof(linked_list) * (N + 1));
                 arr[N].name = name[N];
-                arr[N].open = open[N];
-                arr[N].close = close[N];
+                arr[N].openn = openn[N];
+                arr[N].closee = closee[N];
                 arr[N].next = NULL;
                 arr[N - 1].next = &arr[N];
                 N += 1;
@@ -155,7 +155,7 @@ int main()
             scanf("%s", &word);
             for (a = 0; a < N; a++)
             {
-                if (strcmp(arr[a].name, word) == 0 || strcmp(arr[a].open, word) == 0 || strcmp(arr[a].close, word) == 0)
+                if (strcmp(arr[a].name, word) == 0 || strcmp(arr[a].openn, word) == 0 || strcmp(arr[a].closee, word) == 0)
                     printf("\n%s %d\n", "Struct #:", a);
             }
         }
