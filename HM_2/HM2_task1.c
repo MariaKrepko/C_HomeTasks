@@ -9,7 +9,8 @@ typedef struct linked_list
     char *open;
     char *close;
     struct linked_list *next;
-} linked_list;
+} 
+inked_list;
 
 
 void display(linked_list *start)
@@ -158,6 +159,7 @@ int main()
                     printf("\n%s %d\n", "Struct #:", a);
             }
         }
-    }while (count != '7');
+    }
+    while (count != '7');
     return 0;
 }
