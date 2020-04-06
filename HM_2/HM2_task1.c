@@ -43,16 +43,16 @@ void menu()
 {
     char s[7][60] = 
     {
-        "1) Создать первый элемент односвязного списка.",
-        "2) Добавить элемент в конец односвязного списка.",
-        "3) Удалить элемент с конца односвязного списка.",
-        "4) Просмотреть односвязный список.",
-        "5) Удалить весь односвязный список.",
-        "6) Выполнить последовательный поиск заданного элемента в односвязном списк.е",
-        "7) Выйти из программы."
+        "1) Create the first element of a single-linked list.",
+        "2) Add an element to the end of a single-linked list.",
+        "3) Delete an element from the end of a single-linked list.",
+        "4) to View the linked list.",
+        "5) Delete the entire linked list.",
+        "6) to Perform sequential searches for the specified element in odnotsvetna list.e"
+        "7) Exit the program."
     };
     int i;
-    printf("\n%s", "Выберите действие из списка: (1,..,7).\n");
+    printf("\n%s", "Select an action from the list: (1,..,7).\n");
     for (i = 0; i < 7; i++)
         printf("%s\n", s[i]);
 }
@@ -91,7 +91,7 @@ int main()
                 arr[0].next = NULL;
             }
             else
-                printf("\n%s", "Первый элемент был создан.\n");
+                printf("\n%s", "The first element from the list was created.\n");
         }
         
         if (count == '2')
@@ -133,7 +133,7 @@ int main()
         
         if (count == '4')
             if (mode == 0)
-                printf("\n%s\n", "Список пуст.");
+                printf("\n%s\n", "The list is empty.");
             else
                 display(&arr[0]);
        
@@ -150,7 +150,7 @@ int main()
         
         if (count == '6')
         {
-            printf("\n%s", "Ключ слова:");
+            printf("\n%s", "The key word:");
             char word[50];
             scanf("%s", &word);
             for (a = 0; a < N; a++)
